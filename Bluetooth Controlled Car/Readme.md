@@ -1,7 +1,7 @@
 # Bluetooth Controlled Robot Car using Arduino
 
-A simple Bluetooth-controlled robot car built using **Arduino UNO**, **HC-05 Bluetooth Module**, and **L298N Motor Driver**.  
-The robot can move forward, backward, left, right, and stop using commands sent from a smartphone via Bluetooth.
+This project is a simple Bluetooth-controlled robot car built using an Arduino UNO, HC-05 Bluetooth module, and motor driver.  
+The robot receives commands from a smartphone via Bluetooth and performs movements like forward, backward, left, right, and stop.
 
 ---
 
@@ -11,8 +11,8 @@ The robot can move forward, backward, left, right, and stop using commands sent 
 - Forward and backward movement
 - Left and right turning
 - Stop functionality
-- Beginner-friendly robotics project
-- Real-time motor control
+- Easy to build and program
+- Beginner-friendly Arduino robotics project
 
 ---
 
@@ -22,7 +22,7 @@ The robot can move forward, backward, left, right, and stop using commands sent 
 |---|---|
 | Arduino UNO | 1 |
 | HC-05 Bluetooth Module | 1 |
-| L298N Motor Driver | 1 |
+| L298N / Motor Driver | 1 |
 | DC Motors | 2 |
 | Robot Chassis | 1 |
 | Wheels | 2 |
@@ -31,9 +31,9 @@ The robot can move forward, backward, left, right, and stop using commands sent 
 
 ---
 
-# 🔌 Circuit Connections
+# 🔌 Pin Connections
 
-## Motor Driver to Arduino
+## Arduino to Motor Driver
 
 | Arduino Pin | Function |
 |---|---|
@@ -44,7 +44,7 @@ The robot can move forward, backward, left, right, and stop using commands sent 
 
 ---
 
-## HC-05 Bluetooth Connections
+## HC-05 Bluetooth Module
 
 | HC-05 Pin | Arduino UNO |
 |---|---|
@@ -63,7 +63,7 @@ The robot can move forward, backward, left, right, and stop using commands sent 
 | B | Move Backward |
 | L | Turn Left |
 | R | Turn Right |
-| S | Stop |
+| S | Stop Robot |
 
 ---
 
@@ -130,9 +130,17 @@ void loop() {
 
 ---
 
-# 📲 Mobile Applications
+# 🚀 How to Use
 
-You can use any Bluetooth controller app:
+1. Connect all components properly
+2. Upload the code to Arduino UNO
+3. Pair HC-05 with your smartphone
+4. Open a Bluetooth controller app
+5. Send commands to control the robot
+
+---
+
+# 📲 Recommended Bluetooth Apps
 
 - Serial Bluetooth Terminal
 - Arduino Bluetooth Controller
@@ -140,19 +148,7 @@ You can use any Bluetooth controller app:
 
 ---
 
-# 🚀 How to Run
-
-1. Assemble the robot chassis
-2. Connect motors to L298N motor driver
-3. Connect HC-05 to Arduino
-4. Upload the Arduino code
-5. Pair HC-05 with smartphone
-6. Open Bluetooth app
-7. Send movement commands
-
----
-
-# 🔑 Default HC-05 Password
+# 🔑 HC-05 Default Password
 
 ```text
 1234
@@ -168,31 +164,30 @@ or
 
 # ⚠ Important Notes
 
-- Disconnect HC-05 TX/RX before uploading code
-- Reconnect after uploading
-- Use proper battery supply for motors
-- Avoid powering motors directly from Arduino
+- Disconnect HC-05 TX/RX wires before uploading code
+- Reconnect them after uploading
+- Use an external battery for motors
+- Do not power motors directly from Arduino UNO
 
 ---
 
 # 📚 Applications
 
-- Bluetooth Robotics
+- Bluetooth Robot Car
+- Arduino Robotics Projects
 - Wireless Vehicle Control
-- Obstacle Avoidance Base Project
-- Robotics Learning
-- Arduino Mini Projects
+- Educational Robotics
+- Beginner Automation Projects
 
 ---
 
 # 🔮 Future Improvements
 
-- Obstacle avoidance using ultrasonic sensor
-- Voice control
-- WiFi control using ESP8266
-- Mobile app interface
-- Line follower integration
-- Camera streaming
+- Obstacle Avoidance
+- Voice Control
+- Mobile App Interface
+- WiFi-Based Control
+- Line Following Robot
 
 ---
 
