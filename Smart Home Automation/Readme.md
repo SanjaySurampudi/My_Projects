@@ -1,22 +1,22 @@
-# Smart Home Automation System using Arduino & Bluetooth
+# Smart Home Automation using Arduino and Bluetooth
 
-A Bluetooth-based Smart Home Automation System built using **Arduino UNO**, **HC-05 Bluetooth Module**, and **4-Channel Relay Module**.  
-This project allows users to wirelessly control home appliances using a smartphone Bluetooth application.
-
----
-
-## 📌 Features
-
-- Control up to 4 electrical appliances
-- Wireless communication using Bluetooth
-- Easy smartphone control
-- Low-cost and beginner-friendly project
-- Real-time ON/OFF switching
-- Expandable for IoT applications
+A Bluetooth-based Smart Home Automation project using **Arduino UNO**, **HC-05 Bluetooth Module**, and **4-Channel Relay Module**.  
+This system allows users to control home appliances wirelessly through a smartphone using Bluetooth commands.
 
 ---
 
-## 🛠 Components Required
+# 📌 Features
+
+- Wireless appliance control using Bluetooth
+- Control up to 4 devices independently
+- Easy smartphone operation
+- Low-cost home automation system
+- Beginner-friendly Arduino project
+- Real-time relay switching
+
+---
+
+# 🛠 Components Required
 
 | Component | Quantity |
 |---|---|
@@ -25,27 +25,16 @@ This project allows users to wirelessly control home appliances using a smartpho
 | 4-Channel Relay Module | 1 |
 | LEDs / Bulbs / Appliances | 4 |
 | Jumper Wires | As required |
-| Power Supply | 5V |
-| Smartphone with Bluetooth | 1 |
+| 5V Power Supply | 1 |
+| Smartphone | 1 |
 
 ---
 
-## 🔌 Circuit Diagram
+# 🔌 Pin Connections
 
-Connect the components as shown in the circuit diagram.
+## Relay Connections
 
-### HC-05 Connections
-
-| HC-05 Pin | Arduino UNO |
-|---|---|
-| VCC | 5V |
-| GND | GND |
-| TXD | RX (D0) |
-| RXD | TX (D1) |
-
-### Relay Connections
-
-| Relay Module | Arduino Pin |
+| Relay Module Pin | Arduino UNO |
 |---|---|
 | IN1 | D10 |
 | IN2 | D9 |
@@ -54,7 +43,18 @@ Connect the components as shown in the circuit diagram.
 
 ---
 
-## 📱 Bluetooth Commands
+## HC-05 Bluetooth Connections
+
+| HC-05 Pin | Arduino UNO |
+|---|---|
+| VCC | 5V |
+| GND | GND |
+| TXD | RX (D0) |
+| RXD | TX (D1) |
+
+---
+
+# 📱 Bluetooth Commands
 
 | Command | Action |
 |---|---|
@@ -69,13 +69,12 @@ Connect the components as shown in the circuit diagram.
 
 ---
 
-## 💻 Arduino Code
-
-Upload the Arduino sketch to the UNO board using Arduino IDE.
+# 💻 Arduino Code
 
 ```cpp
 char data = 0;
 
+// Relay pins
 int relay1 = 10;
 int relay2 = 9;
 int relay3 = 8;
@@ -90,6 +89,7 @@ void setup()
   pinMode(relay3, OUTPUT);
   pinMode(relay4, OUTPUT);
 
+  // Relays OFF initially
   digitalWrite(relay1, HIGH);
   digitalWrite(relay2, HIGH);
   digitalWrite(relay3, HIGH);
@@ -102,38 +102,74 @@ void loop()
   {
     data = Serial.read();
 
+    // Relay 1
     if (data == 'A')
+    {
       digitalWrite(relay1, LOW);
+      Serial.println("Relay 1 ON");
+    }
 
     if (data == 'a')
+    {
       digitalWrite(relay1, HIGH);
+      Serial.println("Relay 1 OFF");
+    }
 
+    // Relay 2
     if (data == 'B')
+    {
       digitalWrite(relay2, LOW);
+      Serial.println("Relay 2 ON");
+    }
 
     if (data == 'b')
+    {
       digitalWrite(relay2, HIGH);
+      Serial.println("Relay 2 OFF");
+    }
 
+    // Relay 3
     if (data == 'C')
+    {
       digitalWrite(relay3, LOW);
+      Serial.println("Relay 3 ON");
+    }
 
     if (data == 'c')
+    {
       digitalWrite(relay3, HIGH);
+      Serial.println("Relay 3 OFF");
+    }
 
+    // Relay 4
     if (data == 'D')
+    {
       digitalWrite(relay4, LOW);
+      Serial.println("Relay 4 ON");
+    }
 
     if (data == 'd')
+    {
       digitalWrite(relay4, HIGH);
+      Serial.println("Relay 4 OFF");
+    }
   }
 }
 ```
 
 ---
 
-## 📲 Mobile Applications
+# 🚀 How to Use
 
-You can use any Bluetooth terminal application:
+1. Connect the HC-05 and relay module to Arduino UNO
+2. Upload the Arduino code
+3. Pair HC-05 with your smartphone
+4. Open a Bluetooth terminal application
+5. Send commands to control appliances
+
+---
+
+# 📲 Recommended Bluetooth Apps
 
 - Serial Bluetooth Terminal
 - Bluetooth Electronics
@@ -141,15 +177,7 @@ You can use any Bluetooth terminal application:
 
 ---
 
-## 🚀 How to Run
-
-1. Connect all components properly
-2. Upload the Arduino code
-3. Pair HC-05 with smartphone
-4. Open Bluetooth terminal app
-5. Send commands to control appliances
-
-### Default HC-05 Password
+# 🔑 HC-05 Default Password
 
 ```text
 1234
@@ -163,41 +191,42 @@ or
 
 ---
 
-## ⚠ Important Notes
+# ⚠ Important Notes
 
-- Disconnect HC-05 TX/RX pins before uploading code
+- Disconnect HC-05 TX/RX before uploading code
 - Reconnect after uploading
-- Relay modules are usually ACTIVE LOW
-- Use caution while handling AC appliances
+- Most relay modules are ACTIVE LOW
+- Be careful while handling AC appliances
+- Use proper insulation and safety measures
 
 ---
 
-## 📚 Applications
+# 📚 Applications
 
 - Smart Home Systems
 - Wireless Appliance Control
-- Home Automation Projects
-- IoT Learning Projects
-- Mini Engineering Projects
+- Home Automation Learning
+- IoT Mini Projects
+- Arduino Automation Projects
 
 ---
 
-## 🔮 Future Improvements
+# 🔮 Future Improvements
 
 - Voice control integration
-- WiFi/IoT support
 - Mobile app development
+- WiFi and IoT support
 - Sensor-based automation
-- Google Assistant / Alexa integration
+- Google Assistant integration
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 Sanjay Surampudi
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project is open-source and available under the MIT License.
