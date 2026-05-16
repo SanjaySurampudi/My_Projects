@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment variables
+.env
+.env.local
+*.env
+
+# Flask
+instance/
+.webassets-cache
+flask_session/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# OpenLane outputs (do not commit GDS/runs)
+designs/*/runs/
+*.gds
+*.gds2
+*.mag
+*.lef
+*.def
+*.spef
+*.sdf
+*.lib
+*.v.gz
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# JWT secrets (never commit)
+secret_key.txt
+secrets.py
+
+# Node modules (if any)
+node_modules/
