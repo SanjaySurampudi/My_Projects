@@ -428,7 +428,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Author
 
-**Sanjay** — [@projectspace121](https://github.com/projectspace121)
+**Sanjay** Surampudi
 
 > Built as part of a VLSI design project demonstrating the complete RTL to GDS physical design flow using open-source EDA tools.
 
